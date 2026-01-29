@@ -19,10 +19,9 @@ const Login = () => {
         password,
       });
 
-      // Save token
+  
       localStorage.setItem("accessToken", response.data.access);
 
-      // Go to tasks page
       navigate("/tasks");
     } catch  {
       setError("Invalid username or password");
