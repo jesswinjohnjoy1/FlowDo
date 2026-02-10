@@ -13,7 +13,7 @@ const TaskItem = ({ task, onTaskUpdated, onTaskDeleted }: TaskItemProps) => {
   const [taskTitle, setTaskTitle] = useState(task.title);
   const [loading, setLoading] = useState(false);
 
-  // ✅ Toggle complete
+
   const handleToggleComplete = async () => {
     try {
       setLoading(true);
@@ -27,7 +27,7 @@ const TaskItem = ({ task, onTaskUpdated, onTaskDeleted }: TaskItemProps) => {
       setLoading(false);
     }
   };
-  // ✅ Edit title
+ 
   const handleSaveTitle = async () => {
     try {
       setLoading(true);
@@ -43,7 +43,7 @@ const TaskItem = ({ task, onTaskUpdated, onTaskDeleted }: TaskItemProps) => {
     }
   };
 
-  // ✅ Delete task
+
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this task?")) {
       return;
